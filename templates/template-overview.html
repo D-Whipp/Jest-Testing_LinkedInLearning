@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puppy Farm</title>
+
+    <style>
+      /* general styles start */
+      :root {
+        --main-bg: #66b3f1;
+        --offset-bg: #000a66;
+        --card-bg: #727272;
+      }
+
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: linear-gradient(to top left, #000, #fff);
+        color: #000;
+        line-height: 1.7;
+        min-height: 100vh;
+        width: 100%;
+        padding: 5rem 5rem 10rem;
+        text-align: center;
+      }
+      /* general styles end */
+
+      /* template-overview styles start */
+      h1 {
+        font-size: 4rem;
+      }
+
+      .gold-color-identifier {
+        color: gold;
+      }
+      /* template-overview styles end */
+
+      /* card styles start */
+      .container {
+        display: inline-block;
+      }
+
+      .card {
+        border: 5px solid darkgrey;
+        border-radius: 11px;
+        text-align: center;
+        height: 100%;
+        width: 30rem;
+        margin: 2rem auto;
+        padding: 1rem;
+        background-color: var(--card-bg);
+        background: linear-gradient(to top right, var(--card-bg), #fff);
+        box-shadow: 0px 0px 5px black;
+        position: relative;
+      }
+
+      .card__image {
+        border-radius: 25px;
+        box-shadow: 0px 0px 14px white;
+        height: 15rem;
+        width: 20rem;
+      }
+
+      .card__family-friendly {
+        color: gold;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        background-color: var(--card-bg);
+        border-radius: 8px;
+        font-weight: bolder;
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 50%;
+      }
+
+      .card__not-family-friendly {
+        display: none;
+      }
+
+      .card-title {
+        background-color: var(--card-bg);
+        color: gold;
+        font-size: 2rem;
+        width: 29rem;
+        margin: 0 -3%;
+      }
+
+      .card__dogBreed {
+        width: 100%;
+      }
+
+      .card__details {
+        color: gold;
+      }
+
+      .detail__identifier {
+        font-weight: bold;
+        font-size: 1.3rem;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .identifier__info {
+        color: #eee;
+      }
+
+      .card__description {
+        margin-bottom: 1rem;
+      }
+
+      .card__link {
+        text-decoration: none;
+        color: gold;
+        font-size: 1.3rem;
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        padding: 0.5rem 0.75rem;
+        box-shadow: 5px 5px black;
+      }
+
+      .card__link:hover {
+        cursor: pointer;
+        box-shadow: 1px 1px black;
+      }
+
+      /* card styles end */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🐕 Puppy <span class="gold-color-identifier">Farm</span> 🦮</h1>
+      <div class="cards-container">{%PUPPY_CARDS%}</div>
+    </div>
+  </body>
+</html>
